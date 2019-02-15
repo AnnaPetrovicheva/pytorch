@@ -363,6 +363,10 @@ def sigmoid(g, self):
     return g.op("Sigmoid", self)
 
 
+def floor(g, self):
+    return g.op("Floor", self)
+
+
 def _reduce_op_symbolic(onnx_op_name):
     def symbolic(g, self, dim=None, keepdim=None):
         if dim is None:
